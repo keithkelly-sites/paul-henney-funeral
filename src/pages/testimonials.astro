@@ -1,0 +1,239 @@
+---
+/**
+ * Testimonials — Paul Henney Cremation & Funeral Tributes
+ * Real words from real families. The emotional core of the site.
+ */
+import Layout from '../layouts/Layout.astro';
+
+const testimonials = [
+  {
+    text: "I cant say enough about how good I was treated and the great service at Henney's. Paul and Marie took care of all the details including the church mass arrangements. Everyone at Henney's was helpful with a smile and very comforting. They are professionals and really showed us what they could do in our time of need.",
+    name: "Scott Santomo",
+    date: "June 2025"
+  },
+  {
+    text: "Our sincere gratitude to Marie, Allina and Paul for treating our family like they do their families. Marie and Allina were with us every step of our journey. The loss of my husband, Rich, was agonizing but with their kindness, generosity, patience, understanding, and concern and love, I was able to revive my faith and trust in them and in my GOD. I could not have made it through this time of grief without them.",
+    name: "Patricia Kaczmarek",
+    date: "December 2024"
+  },
+  {
+    text: "I cannot thank Marie W. enough! During the worst time of my life she held my hand and helped me through every detail and decision for my mother's funeral. Everyone was so nice and helpful and I am forever grateful!",
+    name: "Melissa Wittler",
+    date: "August 2022"
+  },
+  {
+    text: "Words cannot express enough how thankful we are for this wonderful, caring place of memorial tributes. When my son passed, it felt like they took me by the hand and guided me gently through all that you must endure. They were kind, gentle, patient, loving and professional. They felt like family at a time when you need your family around you.",
+    name: "Anna Marie Newcomer",
+    date: "November 2017"
+  },
+  {
+    text: "The identification viewing was so nicely done. It left us with such a good memory of Grace. She looked so beautiful. We can't thank you enough!",
+    name: "Donald and Jean Scheeser",
+    date: "July 2017"
+  },
+  {
+    text: "We had a very positive experience. Patrick and everyone went above and beyond what we expected out of a funeral home. All of you care about the people so much. Thank you for everything you did for our family.",
+    name: "Family Testimonial",
+    date: ""
+  }
+];
+---
+<Layout title="Testimonials | Paul Henney Cremation & Funeral Tributes" activePage="testimonials" description="Read what families say about their experience with Paul Henney Cremation & Funeral Tributes in Bethel Park, PA.">
+
+<section class="testimonials-hero">
+  <div class="testimonials-hero-inner">
+    <span class="testimonials-hero-label">Testimonials</span>
+    <h1 class="testimonials-hero-title">In Their<br />Own Words</h1>
+    <div class="testimonials-hero-line"></div>
+  </div>
+</section>
+
+<section class="testimonials-grid">
+  <div class="testimonials-grid-inner">
+    {testimonials.map((t, i) => (
+      <blockquote class={`testimonial-card reveal ${i === 0 ? 'featured' : ''}`}>
+        <div class="testimonial-quote-mark">&ldquo;</div>
+        <p class="testimonial-text">{t.text}</p>
+        <footer class="testimonial-footer">
+          <cite class="testimonial-name">{t.name}</cite>
+          {t.date && <span class="testimonial-date">{t.date}</span>}
+        </footer>
+      </blockquote>
+    ))}
+  </div>
+</section>
+
+<section class="testimonials-cta reveal">
+  <div class="testimonials-cta-inner">
+    <p>Every family we serve becomes part of our family.</p>
+    <a href="/contact" class="cta-button">Get in Touch</a>
+  </div>
+</section>
+
+</Layout>
+
+<style>
+  .testimonials-hero {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-3xl) var(--space-lg) var(--space-2xl);
+    background: radial-gradient(ellipse at 50% 80%, var(--color-amber-glow), transparent 60%);
+  }
+
+  .testimonials-hero-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-amber);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: var(--space-md);
+  }
+
+  .testimonials-hero-title {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-hero);
+    font-weight: 300;
+    line-height: 0.95;
+    color: var(--color-cream);
+    letter-spacing: -0.02em;
+  }
+
+  .testimonials-hero-line {
+    width: 60px;
+    height: 1px;
+    background: var(--color-amber);
+    margin: var(--space-lg) auto 0;
+  }
+
+  /* Grid */
+  .testimonials-grid {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .testimonials-grid-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  @media (min-width: 700px) {
+    .testimonials-grid-inner {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .testimonial-card.featured {
+      grid-column: 1 / -1;
+    }
+  }
+
+  .testimonial-card {
+    padding: var(--space-xl);
+    border: 1px solid oklch(1 0 0 / 0.05);
+    border-radius: var(--border-radius);
+    background: var(--color-bg-card);
+    position: relative;
+    transition: border-color 0.4s ease;
+  }
+
+  .testimonial-card:hover {
+    border-color: var(--color-amber-dim);
+  }
+
+  .testimonial-card.featured {
+    background: var(--color-bg-warm);
+    border-color: oklch(1 0 0 / 0.08);
+    text-align: center;
+    padding: var(--space-2xl);
+  }
+
+  .testimonial-quote-mark {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: clamp(3rem, 5vw, 5rem);
+    color: var(--color-amber-dim);
+    line-height: 0.5;
+    margin-bottom: var(--space-sm);
+    opacity: 0.5;
+  }
+
+  .testimonial-text {
+    font-size: var(--font-size-base);
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    font-style: italic;
+  }
+
+  .featured .testimonial-text {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-lg);
+    color: var(--color-cream);
+    max-width: 60ch;
+    margin: 0 auto;
+  }
+
+  .testimonial-footer {
+    margin-top: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .featured .testimonial-footer {
+    align-items: center;
+  }
+
+  .testimonial-name {
+    font-style: normal;
+    font-weight: 400;
+    color: var(--color-amber);
+    font-size: var(--font-size-sm);
+    letter-spacing: 0.03em;
+  }
+
+  .testimonial-date {
+    font-size: 0.75rem;
+    color: var(--color-text-dim);
+  }
+
+  /* CTA */
+  .testimonials-cta {
+    padding: var(--space-3xl) var(--space-lg);
+    text-align: center;
+    background: radial-gradient(ellipse at center, var(--color-amber-glow), transparent 70%);
+  }
+
+  .testimonials-cta-inner {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .testimonials-cta-inner p {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-xl);
+    font-weight: 300;
+    color: var(--color-cream);
+    margin-bottom: var(--space-lg);
+    line-height: 1.3;
+  }
+
+  .cta-button {
+    display: inline-block;
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-base);
+    color: var(--color-amber);
+    border: 1px solid var(--color-amber-dim);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--border-radius);
+    transition: background 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+  }
+
+  .cta-button:hover {
+    background: var(--color-amber);
+    color: var(--color-bg);
+  }
+</style>

@@ -1,0 +1,417 @@
+---
+/**
+ * Services — Paul Henney Cremation & Funeral Tributes
+ * Burial, cremation, and green burial options with transparent pricing.
+ */
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="Services | Paul Henney Cremation & Funeral Tributes" activePage="services" description="Burial tributes, traditional and contemporary cremation, and green burial options. Thoughtful services, thoughtfully priced.">
+
+<section class="services-hero">
+  <div class="services-hero-inner">
+    <span class="services-hero-label">Our Services</span>
+    <h1 class="services-hero-title">Honoring Every<br />Life, Every Way</h1>
+    <div class="services-hero-line"></div>
+  </div>
+</section>
+
+<section class="services-intro reveal">
+  <div class="container--narrow">
+    <p class="intro-text">Whether your family chooses burial or cremation, we create personalized tributes that reflect the life lived. Every service is designed around what made your loved one unique.</p>
+  </div>
+</section>
+
+<section class="service-section reveal" id="burial">
+  <div class="service-section-inner">
+    <div class="service-image">
+      <img src="/images/987238-funeral-fs-600x450-26.jpg" alt="Floral arrangement" loading="lazy" />
+    </div>
+    <div class="service-content">
+      <h2>Burial Tributes</h2>
+      <p>For most families, burial is the preferred method of disposition. Public funerals with viewing allow family and friends to gather, to grieve, and to say goodbye. Seeing a loved one peacefully at rest can be deeply comforting.</p>
+      <p>A well-planned, personalized tribute will cause you to remember, reflect, cry, and even laugh. In the end, the funeral fulfills its original purpose: to honor a life lived and begin the healing process for those left to live on.</p>
+      <div class="service-detail">
+        <span class="service-detail-label">Packages starting at</span>
+        <span class="service-detail-price">$5,640</span>
+        <span class="service-detail-note">Includes visitation and casket</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-section reverse reveal" id="cremation">
+  <div class="service-section-inner">
+    <div class="service-image">
+      <img src="/images/778156-urnwreathwhiteyellow.jpg" alt="Cremation urn with floral arrangement" loading="lazy" />
+    </div>
+    <div class="service-content">
+      <h2>Traditional Cremation</h2>
+      <p>Many families are unaware of the options available with cremation. After a review of the choices, 70% of cremation families choose to have some type of visitation, gathering, or service to accompany this form of disposition.</p>
+      <p>We often hear people say "just cremate me." This unselfish statement is meant to spare the family grief and money. But families need a safe, secure place to express their sympathy and begin the transition to living without their loved one while honoring them one last time.</p>
+      <div class="service-offerings">
+        <h3>Cremation Options</h3>
+        <ul>
+          <li>Traditional cremation with viewing and service</li>
+          <li>Contemporary cremation with memorial gathering</li>
+          <li>Direct cremation with private family time</li>
+          <li>Green burial tributes</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="service-section reveal" id="personalized">
+  <div class="service-section-inner">
+    <div class="service-image">
+      <img src="/images/442122-1-our-services.jpg" alt="Family planning personalized service" loading="lazy" />
+    </div>
+    <div class="service-content">
+      <h2>Personalized Services</h2>
+      <p>Paul and veteran funeral director Marie Wohlgemuth take time to learn about the deceased, their family and friends, and what was important in their life. From there, a personalized and fitting funeral service is designed to help tell the life story of the deceased.</p>
+      <div class="service-features">
+        <div class="feature">
+          <h4>Online Memorials</h4>
+          <p>Customized memorials for family and friends to post condolences, share memories, and light candles in honor of your loved one.</p>
+        </div>
+        <div class="feature">
+          <h4>Tribute Videos</h4>
+          <p>Personal tribute videos that transform your treasured photographs into a video celebration of memories, available on DVD or digital.</p>
+        </div>
+        <div class="feature">
+          <h4>Aftercare Services</h4>
+          <p>Personal follow-up meetings after the funeral to help with administrative tasks and the transition ahead. Plus a year of daily grief support.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing reveal" id="pricing">
+  <div class="pricing-inner">
+    <h2>Thoughtful Services, Thoughtfully Priced</h2>
+    <p class="pricing-text">We understand the importance of cost and promise to create services that fit your needs. There are many factors that influence the selection of a funeral home: reputation, integrity, service, price, and standards of care.</p>
+    <p class="pricing-text">If price is your only consideration, we may not be your best choice. If you take everything into consideration, you will find us to be an excellent choice providing excellent value.</p>
+    <p class="pricing-quote">The value of our service will always be greater than the price.</p>
+    <div class="pricing-cta">
+      <a href="tel:4128351312" class="cta-button">Call to discuss options</a>
+    </div>
+  </div>
+</section>
+
+<section class="preneed reveal" id="preneed">
+  <div class="preneed-inner">
+    <div class="preneed-content">
+      <h2>Pre-Planning</h2>
+      <p>The Henney preneed program quickly became one of the most successful in Southwestern Pennsylvania. Pre-arranging relieves the emotional and financial burden from your family before the time of need.</p>
+      <p>Planning ahead gives you the opportunity to make your wishes known, lock in today's prices, and spare your family the difficulty of making decisions during a time of grief.</p>
+      <a href="/contact" class="cta-link-arrow">Request a free planning guide &rarr;</a>
+    </div>
+    <div class="preneed-image">
+      <img src="/images/924962-man-female-meeting.jpg" alt="Pre-planning consultation" loading="lazy" />
+    </div>
+  </div>
+</section>
+
+</Layout>
+
+<style>
+  .services-hero {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-3xl) var(--space-lg) var(--space-2xl);
+    background: radial-gradient(ellipse at 50% 80%, var(--color-amber-glow), transparent 60%);
+  }
+
+  .services-hero-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-amber);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-bottom: var(--space-md);
+  }
+
+  .services-hero-title {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-hero);
+    font-weight: 300;
+    line-height: 0.95;
+    color: var(--color-cream);
+    letter-spacing: -0.02em;
+  }
+
+  .services-hero-line {
+    width: 60px;
+    height: 1px;
+    background: var(--color-amber);
+    margin: var(--space-lg) auto 0;
+  }
+
+  /* Intro */
+  .services-intro {
+    padding: var(--space-xl) var(--space-lg);
+    text-align: center;
+  }
+
+  .intro-text {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-lg);
+    font-weight: 300;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    max-width: 55ch;
+    margin: 0 auto;
+  }
+
+  /* Service sections */
+  .service-section {
+    padding: var(--space-2xl) var(--space-lg);
+    border-top: 1px solid oklch(1 0 0 / 0.04);
+  }
+
+  .service-section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    align-items: start;
+  }
+
+  @media (min-width: 768px) {
+    .service-section-inner {
+      grid-template-columns: 1fr 1.4fr;
+    }
+
+    .service-section.reverse .service-section-inner {
+      grid-template-columns: 1.4fr 1fr;
+    }
+
+    .service-section.reverse .service-image {
+      order: 2;
+    }
+  }
+
+  .service-image img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    filter: brightness(0.9) sepia(0.1);
+  }
+
+  .service-content h2 {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-2xl);
+    font-weight: 300;
+    color: var(--color-cream);
+    margin-bottom: var(--space-md);
+  }
+
+  .service-content p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+  }
+
+  /* Price detail */
+  .service-detail {
+    margin-top: var(--space-lg);
+    padding: var(--space-md);
+    border: 1px solid oklch(1 0 0 / 0.06);
+    border-radius: var(--border-radius);
+    background: var(--color-bg-card);
+  }
+
+  .service-detail-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.25rem;
+  }
+
+  .service-detail-price {
+    display: block;
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-2xl);
+    font-weight: 500;
+    color: var(--color-amber);
+  }
+
+  .service-detail-note {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-dim);
+    margin-top: 0.25rem;
+  }
+
+  /* Offerings list */
+  .service-offerings {
+    margin-top: var(--space-lg);
+  }
+
+  .service-offerings h3 {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    color: var(--color-cream);
+    margin-bottom: var(--space-sm);
+  }
+
+  .service-offerings li {
+    color: var(--color-text-muted);
+    padding: 0.4em 0;
+    padding-left: 1.2em;
+    position: relative;
+    font-size: var(--font-size-sm);
+  }
+
+  .service-offerings li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.85em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-amber-dim);
+  }
+
+  /* Features grid */
+  .service-features {
+    margin-top: var(--space-lg);
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .feature h4 {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    color: var(--color-amber);
+    margin-bottom: 0.3rem;
+  }
+
+  .feature p {
+    font-size: var(--font-size-sm);
+    margin-bottom: 0;
+  }
+
+  /* Pricing */
+  .pricing {
+    padding: var(--space-2xl) var(--space-lg);
+    text-align: center;
+    background: var(--color-bg-warm);
+  }
+
+  .pricing-inner {
+    max-width: var(--max-width-narrow);
+    margin: 0 auto;
+  }
+
+  .pricing-inner h2 {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-2xl);
+    font-weight: 300;
+    color: var(--color-cream);
+    margin-bottom: var(--space-lg);
+  }
+
+  .pricing-text {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+    max-width: 55ch;
+    margin-inline: auto;
+  }
+
+  .pricing-quote {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-xl);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-amber);
+    margin: var(--space-xl) auto;
+    max-width: 40ch;
+  }
+
+  .pricing-cta {
+    margin-top: var(--space-lg);
+  }
+
+  .cta-button {
+    display: inline-block;
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-base);
+    color: var(--color-amber);
+    border: 1px solid var(--color-amber-dim);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--border-radius);
+    transition: background 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+  }
+
+  .cta-button:hover {
+    background: var(--color-amber);
+    color: var(--color-bg);
+  }
+
+  /* Preneed */
+  .preneed {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .preneed-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .preneed-inner {
+      grid-template-columns: 1.2fr 1fr;
+    }
+  }
+
+  .preneed-content h2 {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-2xl);
+    font-weight: 300;
+    color: var(--color-cream);
+    margin-bottom: var(--space-md);
+  }
+
+  .preneed-content p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+  }
+
+  .cta-link-arrow {
+    font-size: var(--font-size-base);
+    color: var(--color-amber);
+    transition: opacity 0.3s ease;
+    text-decoration: none;
+  }
+
+  .cta-link-arrow:hover {
+    opacity: 0.8;
+  }
+
+  .preneed-image img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    filter: brightness(0.9) sepia(0.1);
+  }
+</style>

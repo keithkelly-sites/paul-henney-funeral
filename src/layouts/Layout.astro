@@ -1,0 +1,183 @@
+---
+import { Font } from 'astro:assets';
+import { ClientRouter } from 'astro:transitions';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  activePage?: string;
+}
+
+const { title, description = "Serving Bethel Park and surrounding communities since 1916. Personalized cremation and funeral tributes that celebrate life.", activePage = '' } = Astro.props;
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/about', label: 'About' },
+  { href: '/services', label: 'Services' },
+  { href: '/testimonials', label: 'Testimonials' },
+  { href: '/contact', label: 'Contact' },
+];
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  <Font cssVariable="--font-display" preload />
+  <Font cssVariable="--font-body" preload />
+  <ClientRouter />
+</head>
+<body>
+
+  <a href="#main-content" class="sr-only" style="position:absolute;top:-100px;left:0;z-index:9999;padding:1rem;background:var(--color-bg);color:var(--color-amber);font-size:1rem;">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="/" class="header-brand">
+        <span class="header-brand-name">Paul Henney</span>
+        <span class="header-brand-sub">Cremation & Funeral Tributes</span>
+      </a>
+
+      <nav class="nav-desktop">
+        {navLinks.map(link => (
+          <a href={link.href} class={activePage === link.label.toLowerCase() ? 'active' : ''}>
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <a href="tel:4128351312" class="header-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+        </svg>
+        (412) 835-1312
+      </a>
+
+      <button class="mobile-menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    {navLinks.map(link => (
+      <a href={link.href}>{link.label}</a>
+    ))}
+    <a href="tel:4128351312" class="mobile-nav-phone">(412) 835-1312</a>
+  </nav>
+
+  <main id="main-content">
+    <slot />
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-brand-name">Paul Henney Cremation & Funeral Tributes</div>
+          <p>
+            5570 Library Road<br />
+            Bethel Park, PA 15102<br />
+            <a href="tel:4128351312" style="color: var(--color-amber);">(412) 835-1312</a>
+          </p>
+          <p style="margin-top: var(--space-sm);">
+            Available 24 hours a day,<br />7 days a week.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="/services">Burial Tributes</a>
+          <a href="/services">Traditional Cremation</a>
+          <a href="/services">Contemporary Cremation</a>
+          <a href="/services">Green Burial</a>
+          <a href="/services#pricing">About Our Pricing</a>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="/about">About Us</a>
+          <a href="/about#staff">Our Staff</a>
+          <a href="/testimonials">Testimonials</a>
+          <a href="/contact">Contact Us</a>
+          <a href="/contact#directions">Directions</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; {new Date().getFullYear()} Paul Henney Cremation and Funeral Tributes Inc. All rights reserved.</span>
+        <span>Bethel Park, Pennsylvania</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    let scrollHandler: ((e: Event) => void) | null = null;
+
+    document.addEventListener('astro:page-load', () => {
+      // Header scroll effect
+      const header = document.getElementById('site-header');
+      const scrollThreshold = 80;
+
+      // Remove previous scroll listener to prevent duplicates
+      if (scrollHandler) {
+        window.removeEventListener('scroll', scrollHandler);
+      }
+
+      scrollHandler = () => {
+        if (window.scrollY > scrollThreshold) {
+          header?.classList.add('scrolled');
+        } else {
+          header?.classList.remove('scrolled');
+        }
+      };
+
+      window.addEventListener('scroll', scrollHandler, { passive: true });
+      scrollHandler(new Event('scroll'));
+
+      // Mobile menu — reset state on page change
+      const toggle = document.getElementById('menu-toggle');
+      const mobileNav = document.getElementById('mobile-nav');
+
+      toggle?.classList.remove('open');
+      mobileNav?.classList.remove('open');
+      toggle?.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+
+      toggle?.addEventListener('click', () => {
+        const isOpen = mobileNav?.classList.toggle('open');
+        toggle.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(!!isOpen));
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+
+      // Close mobile menu on link click
+      mobileNav?.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          toggle?.classList.remove('open');
+          mobileNav?.classList.remove('open');
+          toggle?.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+
+      // Reveal on scroll — re-query for new elements after page transition
+      const reveals = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      reveals.forEach(el => observer.observe(el));
+    });
+  </script>
+
+</body>
+</html>

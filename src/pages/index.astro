@@ -1,0 +1,740 @@
+---
+/**
+ * Homepage — Paul Henney Cremation & Funeral Tributes
+ *
+ * Design concept: Inspired by luxury memorial sites and museum exhibition pages
+ * that treat reverence as visual drama, not visual silence. The candlelight ceremony
+ * photo becomes the emotional anchor — "Celebrate Life" in massive Cormorant Garamond
+ * floats over warm amber glow, creating a quiet moment of awe before the page unfolds.
+ * Dark charcoal backgrounds with amber candlelight accents throughout. Each section
+ * reveals on scroll like turning pages in a memory book.
+ *
+ * Reference: The spatial pacing and typographic scale of fc-porto-memorial (Awwwards SOTD),
+ * the warm darkness and candlelight color strategy of luxury hotel sites like Aman,
+ * the scroll-reveal storytelling of editorial longform pieces.
+ */
+import Layout from '../layouts/Layout.astro';
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FuneralHome",
+  "name": "Paul Henney Cremation and Funeral Tributes Inc.",
+  "url": "https://paul-henney-funeral.keithkelly.dev",
+  "telephone": "+1-412-835-1312",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "5570 Library Road",
+    "addressLocality": "Bethel Park",
+    "addressRegion": "PA",
+    "postalCode": "15102",
+    "addressCountry": "US"
+  },
+  "description": "Serving Bethel Park and surrounding communities since 1916. Personalized cremation and funeral tributes that celebrate life.",
+  "foundingDate": "1916"
+};
+---
+<Layout title="Paul Henney Cremation & Funeral Tributes | Bethel Park, PA" activePage="home" description="Serving Bethel Park and surrounding communities since 1916. Personalized cremation and funeral tributes that celebrate life.">
+
+<script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+<!-- HERO — the signature moment -->
+<section class="hero">
+  <div class="hero-bg">
+    <img src="/images/chapel_of_mem1.jpg" alt="" aria-hidden="true" class="hero-bg-img" />
+    <div class="hero-overlay"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">
+        <span class="hero-title-line hero-title-line-1">Celebrate</span>
+        <span class="hero-title-line hero-title-line-2">Life</span>
+      </h1>
+      <div class="hero-divider"></div>
+      <p class="hero-tagline">Serving families in Bethel Park since 1916</p>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- INTRODUCTION -->
+<section class="intro reveal">
+  <div class="intro-inner">
+    <p class="intro-lead">Paul Henney Cremation & Funeral Tributes has become the place where meaningful funerals are an everyday occurrence.</p>
+    <p class="intro-body">We take great time and effort during arrangements to learn about your loved one, their family and friends, and what was important in their life. From there, a personalized and fitting tribute is designed to celebrate the life lived.</p>
+    <a href="/about" class="intro-link">Our story since 1916 &rarr;</a>
+  </div>
+</section>
+
+<!-- SERVICES PREVIEW -->
+<section class="services-preview">
+  <div class="services-preview-header reveal">
+    <span class="section-label">What We Offer</span>
+    <h2 class="section-title">Thoughtful Services,<br />Thoughtfully Priced</h2>
+  </div>
+
+  <div class="services-cards">
+    <div class="service-card reveal">
+      <div class="service-card-image">
+        <img src="/images/987238-funeral-fs-600x450-26.jpg" alt="Floral arrangement for burial tribute" loading="lazy" />
+      </div>
+      <div class="service-card-body">
+        <h3>Burial Tributes</h3>
+        <p>Traditional funeral services with viewing, honoring your loved one with dignity and personal touches that tell their story.</p>
+        <span class="service-card-price">From $5,640</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-card-image">
+        <img src="/images/778156-urnwreathwhiteyellow.jpg" alt="Cremation urn with floral wreath" loading="lazy" />
+      </div>
+      <div class="service-card-body">
+        <h3>Cremation</h3>
+        <p>Traditional and contemporary cremation options, each designed to give families the space and time they need to gather, grieve, and heal.</p>
+        <span class="service-card-price">Multiple options</span>
+      </div>
+    </div>
+
+    <div class="service-card reveal">
+      <div class="service-card-image">
+        <img src="/images/442122-1-our-services.jpg" alt="Family planning personalized funeral service" loading="lazy" />
+      </div>
+      <div class="service-card-body">
+        <h3>Personalized Tributes</h3>
+        <p>Online memorials, tribute videos, and custom ceremonies that reflect the unique life of your loved one.</p>
+        <span class="service-card-price">Included with services</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="services-cta reveal">
+    <a href="/services" class="cta-button">View All Services</a>
+  </div>
+</section>
+
+<!-- TESTIMONIAL PULL QUOTE -->
+<section class="pull-quote reveal">
+  <div class="pull-quote-inner">
+    <div class="pull-quote-mark">&ldquo;</div>
+    <blockquote>
+      <p>When my son passed, it felt like they took me by the hand and guided me gently through all that you must endure. They were kind, gentle, patient, loving and professional. They felt like family at a time when you need your family around you.</p>
+    </blockquote>
+    <cite>Anna Marie Newcomer</cite>
+  </div>
+</section>
+
+<!-- WHAT SETS US APART -->
+<section class="apart reveal">
+  <div class="apart-inner">
+    <span class="section-label">Why Families Choose Us</span>
+    <h2 class="section-title">More Than a Service.<br />A Promise.</h2>
+
+    <div class="apart-grid">
+      <div class="apart-item">
+        <span class="apart-number">01</span>
+        <h3>Personal Attention</h3>
+        <p>We take time to learn about the life lived. Every detail of the service reflects the person being honored, not a formula.</p>
+      </div>
+      <div class="apart-item">
+        <span class="apart-number">02</span>
+        <h3>Aftercare</h3>
+        <p>Our staff meets personally with every family after the funeral to help with the administrative tasks and emotional transition ahead.</p>
+      </div>
+      <div class="apart-item">
+        <span class="apart-number">03</span>
+        <h3>Grief Support</h3>
+        <p>A year of daily grief support emails for every family we serve. Our care doesn't end when the service does.</p>
+      </div>
+      <div class="apart-item">
+        <span class="apart-number">04</span>
+        <h3>Four Generations</h3>
+        <p>The Henney name in funeral service traces back to 1916. This work isn't just our profession, it's our family's calling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM PREVIEW -->
+<section class="team-preview reveal">
+  <div class="team-preview-inner">
+    <div class="team-image-col">
+      <img src="/images/546435-unnamed3.jpg" alt="Paul Henney, Marie Wohlgemuth, and Allina Varner" loading="lazy" />
+    </div>
+    <div class="team-text-col">
+      <span class="section-label">Our Team</span>
+      <h2>Here for You,<br />Every Step</h2>
+      <p>Paul Henney, Marie Wohlgemuth, and Allina Varner bring decades of combined experience and genuine compassion to every family they serve. They're not just professionals. They become your advocates during the most difficult days.</p>
+      <a href="/about#staff" class="cta-link-arrow">Meet our staff &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="home-cta reveal">
+  <div class="home-cta-inner">
+    <h2>Available 24 hours a day,<br />7 days a week.</h2>
+    <a href="tel:4128351312" class="cta-phone">(412) 835-1312</a>
+    <div class="cta-address">
+      <p>5570 Library Road, Bethel Park, PA 15102</p>
+      <a href="/contact" class="cta-link-arrow">Contact us &rarr;</a>
+    </div>
+  </div>
+</section>
+
+</Layout>
+
+<style>
+  /* ============================================================
+     HERO — the signature moment
+     ============================================================ */
+  .hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  .hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    filter: brightness(0.4) sepia(0.3) saturate(0.8);
+    transform: scale(1.05);
+    animation: hero-drift 20s ease-in-out infinite alternate;
+  }
+
+  @keyframes hero-drift {
+    from { transform: scale(1.05) translateY(0); }
+    to { transform: scale(1.10) translateY(-15px); }
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 70%, oklch(0.78 0.14 75 / 0.08), transparent 50%),
+      linear-gradient(to top, var(--color-bg) 0%, transparent 30%),
+      linear-gradient(to bottom, oklch(0.10 0.01 250 / 0.3) 0%, transparent 40%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: var(--space-lg);
+  }
+
+  .hero-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-title-line {
+    display: block;
+    font-family: var(--font-display), Georgia, serif;
+    font-weight: 300;
+    color: var(--color-cream);
+    line-height: 0.85;
+    letter-spacing: -0.03em;
+    opacity: 0;
+    transform: translateY(40px);
+    animation: title-reveal 1.2s ease forwards;
+  }
+
+  .hero-title-line-1 {
+    font-size: clamp(4rem, 14vw, 12rem);
+    animation-delay: 0.3s;
+  }
+
+  .hero-title-line-2 {
+    font-size: clamp(4.5rem, 16vw, 14rem);
+    font-style: italic;
+    color: var(--color-amber);
+    animation-delay: 0.6s;
+  }
+
+  @keyframes title-reveal {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-divider {
+    width: 80px;
+    height: 1px;
+    background: var(--color-amber);
+    margin: var(--space-lg) auto;
+    opacity: 0;
+    animation: fade-in 1s ease 1s forwards;
+  }
+
+  .hero-tagline {
+    font-size: var(--font-size-md);
+    color: var(--color-text-muted);
+    letter-spacing: 0.08em;
+    font-weight: 300;
+    opacity: 0;
+    animation: fade-in 1s ease 1.2s forwards;
+  }
+
+  @keyframes fade-in {
+    to { opacity: 1; }
+  }
+
+  .hero-scroll-hint {
+    position: absolute;
+    bottom: var(--space-xl);
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0;
+    animation: fade-in 1s ease 2s forwards;
+  }
+
+  .hero-scroll-hint span {
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--color-text-dim);
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(to bottom, var(--color-amber-dim), transparent);
+    animation: scroll-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scroll-pulse {
+    0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
+    50% { opacity: 1; transform: scaleY(1); }
+  }
+
+  /* ============================================================
+     INTRODUCTION
+     ============================================================ */
+  .intro {
+    padding: var(--space-3xl) var(--space-lg);
+    text-align: center;
+  }
+
+  .intro-inner {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .intro-lead {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-2xl);
+    font-weight: 300;
+    color: var(--color-cream);
+    line-height: 1.3;
+    margin-bottom: var(--space-lg);
+  }
+
+  .intro-body {
+    font-size: var(--font-size-md);
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-bottom: var(--space-lg);
+  }
+
+  .intro-link {
+    font-size: var(--font-size-sm);
+    color: var(--color-amber);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    transition: opacity 0.3s ease;
+  }
+
+  .intro-link:hover {
+    opacity: 0.7;
+  }
+
+  /* ============================================================
+     SERVICES PREVIEW
+     ============================================================ */
+  .services-preview {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .services-preview-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+  }
+
+  .section-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-amber);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-title {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-2xl);
+    font-weight: 300;
+    color: var(--color-cream);
+    line-height: 1.15;
+  }
+
+  .services-cards {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  @media (min-width: 700px) {
+    .services-cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .service-card {
+    border: 1px solid oklch(1 0 0 / 0.05);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: var(--color-bg-card);
+    transition: border-color 0.4s ease, transform 0.4s ease;
+  }
+
+  .service-card:hover {
+    border-color: var(--color-amber-dim);
+    transform: translateY(-4px);
+  }
+
+  .service-card-image {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+
+  .service-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85) sepia(0.15);
+    transition: transform 0.6s ease, filter 0.6s ease;
+  }
+
+  .service-card:hover .service-card-image img {
+    transform: scale(1.05);
+    filter: brightness(0.9) sepia(0.1);
+  }
+
+  .service-card-body {
+    padding: var(--space-md);
+  }
+
+  .service-card-body h3 {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-cream);
+    margin-bottom: var(--space-xs);
+  }
+
+  .service-card-body p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: var(--space-sm);
+  }
+
+  .service-card-price {
+    font-size: var(--font-size-sm);
+    color: var(--color-amber);
+    font-weight: 400;
+  }
+
+  .services-cta {
+    text-align: center;
+    margin-top: var(--space-xl);
+  }
+
+  .cta-button {
+    display: inline-block;
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-base);
+    color: var(--color-amber);
+    border: 1px solid var(--color-amber-dim);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--border-radius);
+    transition: background 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+  }
+
+  .cta-button:hover {
+    background: var(--color-amber);
+    color: var(--color-bg);
+  }
+
+  /* ============================================================
+     PULL QUOTE
+     ============================================================ */
+  .pull-quote {
+    padding: var(--space-3xl) var(--space-lg);
+    text-align: center;
+    position: relative;
+    background: var(--color-bg-warm);
+  }
+
+  .pull-quote::before,
+  .pull-quote::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, oklch(1 0 0 / 0.06), transparent);
+  }
+
+  .pull-quote::before { top: 0; }
+  .pull-quote::after { bottom: 0; }
+
+  .pull-quote-inner {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .pull-quote-mark {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: clamp(5rem, 10vw, 10rem);
+    color: var(--color-amber-dim);
+    line-height: 0.3;
+    opacity: 0.3;
+    margin-bottom: var(--space-md);
+  }
+
+  .pull-quote blockquote p {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-xl);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--color-cream);
+    line-height: 1.5;
+  }
+
+  .pull-quote cite {
+    display: block;
+    margin-top: var(--space-lg);
+    font-style: normal;
+    font-size: var(--font-size-sm);
+    color: var(--color-amber);
+    letter-spacing: 0.05em;
+  }
+
+  /* ============================================================
+     WHAT SETS US APART
+     ============================================================ */
+  .apart {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .apart-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .apart-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+    margin-top: var(--space-xl);
+    text-align: left;
+  }
+
+  @media (min-width: 600px) {
+    .apart-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .apart-item {
+    padding: var(--space-md);
+    border-left: 1px solid var(--color-amber-dim);
+    padding-left: var(--space-lg);
+  }
+
+  .apart-number {
+    display: block;
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-sm);
+    color: var(--color-amber-dim);
+    margin-bottom: var(--space-xs);
+    letter-spacing: 0.1em;
+  }
+
+  .apart-item h3 {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-cream);
+    margin-bottom: var(--space-xs);
+  }
+
+  .apart-item p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    line-height: 1.7;
+  }
+
+  /* ============================================================
+     TEAM PREVIEW
+     ============================================================ */
+  .team-preview {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .team-preview-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .team-preview-inner {
+      grid-template-columns: 1fr 1.2fr;
+    }
+  }
+
+  .team-image-col img {
+    width: 100%;
+    max-width: 500px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: top;
+    border-radius: var(--border-radius);
+    filter: brightness(0.95);
+  }
+
+  .team-text-col h2 {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-2xl);
+    font-weight: 300;
+    color: var(--color-cream);
+    line-height: 1.15;
+    margin-bottom: var(--space-md);
+  }
+
+  .team-text-col p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+    max-width: 50ch;
+  }
+
+  .cta-link-arrow {
+    font-size: var(--font-size-sm);
+    color: var(--color-amber);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .cta-link-arrow:hover {
+    opacity: 0.7;
+  }
+
+  /* ============================================================
+     CONTACT CTA
+     ============================================================ */
+  .home-cta {
+    padding: var(--space-3xl) var(--space-lg);
+    text-align: center;
+    background: radial-gradient(ellipse at center, var(--color-amber-glow), transparent 65%);
+  }
+
+  .home-cta-inner {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .home-cta-inner h2 {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-2xl);
+    font-weight: 300;
+    color: var(--color-cream);
+    line-height: 1.2;
+    margin-bottom: var(--space-lg);
+  }
+
+  .cta-phone {
+    display: inline-block;
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-3xl);
+    font-weight: 500;
+    color: var(--color-amber);
+    text-decoration: none;
+    letter-spacing: -0.01em;
+    transition: opacity 0.3s ease;
+  }
+
+  .cta-phone:hover {
+    opacity: 0.8;
+  }
+
+  .cta-address {
+    margin-top: var(--space-lg);
+  }
+
+  .cta-address p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-sm);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-bg-img {
+      animation: none;
+      transform: scale(1.05);
+    }
+
+    .hero-title-line {
+      opacity: 1;
+      transform: none;
+      animation: none;
+    }
+
+    .hero-divider,
+    .hero-tagline {
+      opacity: 1;
+      animation: none;
+    }
+
+    .hero-scroll-hint {
+      opacity: 1;
+      animation: none;
+    }
+
+    .scroll-line {
+      animation: none;
+      opacity: 0.6;
+    }
+  }
+</style>

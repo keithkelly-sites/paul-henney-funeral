@@ -1,0 +1,372 @@
+---
+/**
+ * About — Paul Henney Cremation & Funeral Tributes
+ * The Henney family story from 1916 to present. A legacy of care passed through generations.
+ */
+import Layout from '../layouts/Layout.astro';
+---
+<Layout title="About Us | Paul Henney Cremation & Funeral Tributes" activePage="about" description="The Henney name in funeral service traces back to 1916. Four generations of compassionate care in Bethel Park, Pennsylvania.">
+
+<section class="about-hero">
+  <div class="about-hero-inner">
+    <span class="about-hero-label">Est. 1916</span>
+    <h1 class="about-hero-title">A Family<br />Built on Care</h1>
+    <div class="about-hero-line"></div>
+  </div>
+</section>
+
+<section class="legacy reveal">
+  <div class="legacy-inner">
+    <div class="legacy-timeline">
+      <div class="timeline-marker"></div>
+    </div>
+    <div class="legacy-content">
+      <div class="legacy-block">
+        <span class="legacy-year">1916</span>
+        <p>The Henney name in funeral service can be traced back to 1916, when the late H. G. Henney started a funeral home in Carnegie, Pennsylvania. A tradition of compassionate service began that would span more than a century.</p>
+      </div>
+
+      <div class="legacy-block">
+        <span class="legacy-year">1961</span>
+        <p>Paul L. Henney, Sr. joined the family firm in 1948 and soon ventured out on his own to Bethel Park, where he built a state-of-the-art funeral home. The firm handled only 6 deaths in its first year, but Paul and his wife Barbara worked thousands of hours in the community, creating a true home for families who suffered the loss of a loved one.</p>
+      </div>
+
+      <div class="legacy-block">
+        <span class="legacy-year">1980</span>
+        <p>Recognizing the seriousness of his father's illness, Paul Jr. decided to forgo a career in medicine and, at the age of 24, became a licensed funeral director poised to take on the family business. His brother David followed in 1983.</p>
+      </div>
+
+      <div class="legacy-block">
+        <span class="legacy-year">1983</span>
+        <p>With the community growing rapidly and the business expanding, Paul Jr. doubled the size of the funeral home. By 1986, they were serving 150+ families per year. Around this time, Paul Jr. introduced one of Southwestern Pennsylvania's most successful preneed programs.</p>
+      </div>
+
+      <div class="legacy-block">
+        <span class="legacy-year">Today</span>
+        <p>Paul Henney Cremation & Funeral Tributes has become known as the place where meaningful funerals are an everyday occurrence. Paul and veteran funeral director Marie Wohlgemuth take time to learn about the deceased, their family and friends, and what was important in their life. From there, a personalized, meaningful and fitting funeral service is designed to celebrate a life well lived.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="aftercare reveal">
+  <div class="aftercare-inner">
+    <div class="aftercare-image-col">
+      <img src="/images/181138-motherandson.jpg" alt="Comfort and support" loading="lazy" />
+    </div>
+    <div class="aftercare-text-col">
+      <h2>Beyond the Service</h2>
+      <p>Knowing that grief continues once the services are over, the Henney staff meets with every family personally after the funeral. They help survivors get back on their feet and guide them through the many administrative tasks that lie ahead.</p>
+      <p>This has become the hallmark of Paul Henney Cremation & Funeral Tributes. A year of daily grief support emails is offered to every family served, because meaningful care doesn't end when the service does.</p>
+    </div>
+  </div>
+</section>
+
+<section class="staff reveal" id="staff">
+  <div class="staff-inner">
+    <h2 class="section-heading">Our Staff</h2>
+    <p class="section-subtext">Dedicated professionals with the experience to answer all your questions and guide you with genuine compassion.</p>
+
+    <div class="staff-grid">
+      <div class="staff-card">
+        <div class="staff-image-wrap">
+          <img src="/images/546435-unnamed3.jpg" alt="Paul Henney, Marie Wohlgemuth, and Allina Varner" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <div class="staff-names">
+      <div class="staff-name-card">
+        <h3>Paul Henney</h3>
+        <span>Owner</span>
+      </div>
+      <div class="staff-name-card">
+        <h3>Marie Wohlgemuth</h3>
+        <span>Managing Director</span>
+      </div>
+      <div class="staff-name-card">
+        <h3>Allina Varner</h3>
+        <span>Funeral Director</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-cta reveal">
+  <div class="about-cta-inner">
+    <p class="about-cta-text">We are here for you, any time of day or night.</p>
+    <a href="tel:4128351312" class="cta-button">(412) 835-1312</a>
+    <a href="/contact" class="cta-link">Or send us a message</a>
+  </div>
+</section>
+
+</Layout>
+
+<style>
+  .about-hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-3xl) var(--space-lg) var(--space-2xl);
+    position: relative;
+    background: radial-gradient(ellipse at 50% 80%, var(--color-amber-glow), transparent 60%);
+  }
+
+  .about-hero-label {
+    display: block;
+    font-size: var(--font-size-sm);
+    color: var(--color-amber);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    margin-bottom: var(--space-md);
+  }
+
+  .about-hero-title {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-hero);
+    font-weight: 300;
+    line-height: 0.95;
+    color: var(--color-cream);
+    letter-spacing: -0.02em;
+  }
+
+  .about-hero-line {
+    width: 60px;
+    height: 1px;
+    background: var(--color-amber);
+    margin: var(--space-lg) auto 0;
+  }
+
+  /* Timeline legacy section */
+  .legacy {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .legacy-inner {
+    max-width: var(--max-width-narrow);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    gap: var(--space-md);
+  }
+
+  .legacy-timeline {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .legacy-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--color-amber-dim) 10%,
+      var(--color-amber-dim) 90%,
+      transparent
+    );
+  }
+
+  .legacy-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xl);
+  }
+
+  .legacy-block {
+    position: relative;
+  }
+
+  .legacy-block::before {
+    content: '';
+    position: absolute;
+    left: calc(-1 * var(--space-md) - 24px);
+    top: 0.6em;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-amber);
+    box-shadow: 0 0 12px var(--color-amber-glow);
+  }
+
+  .legacy-year {
+    display: block;
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-xl);
+    font-weight: 600;
+    color: var(--color-amber);
+    margin-bottom: var(--space-xs);
+  }
+
+  .legacy-block p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    font-size: var(--font-size-base);
+  }
+
+  /* Aftercare */
+  .aftercare {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .aftercare-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .aftercare-inner {
+      grid-template-columns: 1fr 1.2fr;
+    }
+  }
+
+  .aftercare-image-col img {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    filter: sepia(0.15) brightness(0.9);
+  }
+
+  .aftercare-text-col h2 {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-2xl);
+    font-weight: 300;
+    color: var(--color-cream);
+    margin-bottom: var(--space-md);
+  }
+
+  .aftercare-text-col p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+  }
+
+  /* Staff */
+  .staff {
+    padding: var(--space-2xl) var(--space-lg);
+    text-align: center;
+  }
+
+  .staff-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  .section-heading {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-2xl);
+    font-weight: 300;
+    color: var(--color-cream);
+    margin-bottom: var(--space-sm);
+  }
+
+  .section-subtext {
+    color: var(--color-text-muted);
+    max-width: 50ch;
+    margin: 0 auto var(--space-xl);
+    line-height: 1.7;
+  }
+
+  .staff-grid {
+    margin-bottom: var(--space-lg);
+  }
+
+  .staff-image-wrap img {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: top;
+    border-radius: var(--border-radius);
+    filter: brightness(0.95);
+  }
+
+  .staff-names {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-lg);
+  }
+
+  .staff-name-card {
+    text-align: center;
+  }
+
+  .staff-name-card h3 {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-lg);
+    font-weight: 500;
+    color: var(--color-cream);
+  }
+
+  .staff-name-card span {
+    font-size: var(--font-size-sm);
+    color: var(--color-amber);
+    letter-spacing: 0.05em;
+  }
+
+  /* CTA */
+  .about-cta {
+    padding: var(--space-3xl) var(--space-lg);
+    text-align: center;
+    background: radial-gradient(ellipse at center, var(--color-amber-glow), transparent 70%);
+  }
+
+  .about-cta-inner {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .about-cta-text {
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-xl);
+    font-weight: 300;
+    color: var(--color-cream);
+    margin-bottom: var(--space-lg);
+    line-height: 1.3;
+  }
+
+  .cta-button {
+    display: inline-block;
+    font-family: var(--font-display), Georgia, serif;
+    font-size: var(--font-size-lg);
+    color: var(--color-amber);
+    border: 1px solid var(--color-amber-dim);
+    padding: var(--space-sm) var(--space-xl);
+    border-radius: var(--border-radius);
+    transition: background 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+  }
+
+  .cta-button:hover {
+    background: var(--color-amber);
+    color: var(--color-bg);
+  }
+
+  .cta-link {
+    display: block;
+    margin-top: var(--space-md);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .cta-link:hover {
+    color: var(--color-amber);
+  }
+</style>
